@@ -1,11 +1,14 @@
+
 function Tree() {
     // The tree starts empty
     this.root = null;
 }
 
+
 Tree.prototype.traverse = function() {
     this.root.visit();
 }
+
 
 Tree.prototype.search = function(val) {
    var found = this.root.search(val);

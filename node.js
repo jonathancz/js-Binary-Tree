@@ -1,9 +1,11 @@
+// Node tree
 function Node(val) {
     this.value = val;
     this. left = null;
     this.right = null;
 }
 
+// Add node to the tree
 Node.prototype.addNode = function(n) {
     //Using recursion to add node
     if(n.value < this.value) {
@@ -26,6 +28,7 @@ Node.prototype.addNode = function(n) {
     }
 }
 
+// Search tree for a value
 Node.prototype.search = function(val) {
     if (this.value == val) {
         return this;
@@ -37,10 +40,12 @@ Node.prototype.search = function(val) {
     return null;
 }
 
+// Visit Node
 Node.prototype.visit = function() {
     if(this.left != null) {
         this.left.visit();
     }
+	// Print out node
     console.log(this.value);
     if(this.right != null) {
         this.right.visit();
